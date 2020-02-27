@@ -77,8 +77,8 @@ class TestOptions(unittest.TestCase):
         self.assertEqual(temp[2], [])
 
         #test that the instances of the parser still runs
-       # temp = parseOpts()
-        #self.assertGreaterEqual(temp[0], "optparse.OptionParse at 0x7f9f584d1d20")
+        temp = parseOpts()
+        self.assertGreaterEqual(temp[0], "optparse.OptionParse at 0x7f9f584d1d20")
 
 
 
