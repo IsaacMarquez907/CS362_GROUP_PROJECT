@@ -92,7 +92,20 @@ class testSubtitles(unittest.TestCase):
             self.assertTrue(subtitles.get(lang) is not None, 'Subtitles for \'%s\' not extracted' % lang)
 
 
-    #-------test3: test that chaning the format works properly--------
+    #-------test3: test the auto captions--------
+    def test_auto_captions(self):
+
+        #get all the subtitiles inthe variable
+        self.DL.params['writeautomaticsub'] = True
+        self.DL.params['subtitleslangs'] = ['it']
+        subtitles = self.getSubtitles()
+
+        #test the automic capitions
+        #self.assertTrue(subtitles['it'] is not None)
+
+
+
+    #-------test4: test that chaning the format works properly--------
     def test_format(self):
 
         #get all the subtitles in a variable
