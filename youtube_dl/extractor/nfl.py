@@ -52,7 +52,7 @@ class NFLIE(InfoExtractor):
                                     neworleanssaints|
                                     buccaneers|
                                     azcardinals|
-                                    stlouisrams|
+                                    therams|
                                     49ers|
                                     seahawks
                                 )\.com|

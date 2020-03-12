@@ -1684,7 +1684,9 @@ NO_DEFAULT = object()
 
 ENGLISH_MONTH_NAMES = [
     'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December']
+    'July', 'August', 'September', 'October', 'November', 'December',
+    'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august',
+    'september', 'october', 'november' , 'december']
 
 MONTH_NAMES = {
     'en': ENGLISH_MONTH_NAMES,
