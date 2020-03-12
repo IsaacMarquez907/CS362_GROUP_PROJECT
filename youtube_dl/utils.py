@@ -2132,12 +2132,15 @@ def sanitize_url(url):
     # the number of unwanted failures due to missing protocol
     if url.startswith('//'):
         return 'http:%s' % url
+    if url.startswith('http') == False:
+        return 'http://%s' % url
     # Fix some common typos seen so far
     COMMON_TYPOS = (
         # https://github.com/ytdl-org/youtube-dl/issues/15649
         (r'^httpss://', r'https://'),
         # https://bx1.be/lives/direct-tv/
         (r'^rmtp([es]?)://', r'rtmp\1://'),
+        (r'^http//', r'http://'),
     )
     for mistake, fixup in COMMON_TYPOS:
         if re.match(mistake, url):

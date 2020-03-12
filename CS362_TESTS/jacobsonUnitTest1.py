@@ -15,7 +15,7 @@ from youtube_dl.utils import sanitize_url
 class test_util_sanitize_url(unittest.TestCase):
     #test base case, no fix needed
     def test_sanitize_url_base_case (self):
-        self.assertEqual(sanitize_url('http//:google.com'), 'http//:google.com')
+        self.assertEqual(sanitize_url('http://google.com'), 'http://google.com')
     #test to see if the fucntion preprends http://  
     def test_no_prefix_sanitize_url (self):
         self.assertEqual(sanitize_url('google.com'), 'http://google.com')
@@ -24,10 +24,9 @@ class test_util_sanitize_url(unittest.TestCase):
         self.assertEqual(sanitize_url('http//google.com'), 'http://google.com')
     #test to check if www prefix is formatted correctly
     def test_full_prefix_sanitize_url (self):
-        self.assertEqual(sanitize_url('www.google.com'), 'www.google.com')
+        self.assertEqual(sanitize_url('www.google.com'), 'http://www.google.com')
     #Test the slash expansion functionality 
     def test_sanitize_url_slash_expansion(self):
         self.assertEqual(sanitize_url('//google.com'), 'http://google.com')
-
 if __name__ == '__main__':
     unittest.main()
